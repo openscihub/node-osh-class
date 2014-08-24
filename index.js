@@ -10,14 +10,17 @@ module.exports = function(Super, Class) {
     Class.call(this, opts);
   }
 
+  if (!Class) {
+    Class = Super;
+    Super = null;
+  }
+  else inherits(Constructor, Super);
+
   Constructor.prototype.New = function(opts) {
     return Constructor(
       extend(this.opts, opts || {})
     );
   };
 
-  Class = Class || Super;
-  if (Super !== Class) inherits(Constructor, Super);
-  else Super = null;
   return Constructor;
 };
