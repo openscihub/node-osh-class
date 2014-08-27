@@ -1,13 +1,13 @@
 {
   "name": "revsci-class",
   "version": "0.0.0",
-  "description": "reviewscience.org: a base class for javascript classes.",
+  "description": "openscihub.org: new-free, idempotent js class factory.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -C"
   },
   "author": "Carl A. Bauer",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "inherits": "^2.0.1",
     "xtend": "^4.0.0"
