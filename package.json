@@ -1,7 +1,7 @@
 {
   "name": "revsci-class",
   "version": "0.0.0",
-  "description": "openscihub.org: new-free, idempotent js class factory.",
+  "description": "openscihub.org: new-free, idempotent, inheriting js class factory.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -C"
