@@ -1,7 +1,7 @@
 {
   "name": "osh-class",
-  "version": "0.0.0",
-  "description": "openscihub.org: new-free, idempotent, inheriting js class factory.",
+  "version": "0.0.1",
+  "description": "openscihub.org: new-free, inheriting js class factory.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -C"
