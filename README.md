@@ -13,7 +13,7 @@ npm install osh-class
 ```js
 var Class = require('osh-class');
 
-// Pass in a prototype object. 'constructor' MUST be defined here.
+// Pass in a prototype object.
 var Boat = Class({
   constructor: function(opts) {
     // Do stuff with opts object here.
@@ -79,6 +79,19 @@ var b = B();
 console.log(b.value); // 1
 ```
 
+If an explicit `constructor` function is not specified on a subclass,
+the constructor
+of the superclass will be used. For example,
+
+```js
+var A = Class({
+  constructor: function(value) {this.value = value;}
+});
+var B = Class(A, {});
+
+var b = B(1);
+console.log(b.value); // 1
+```
 
 ## License
 

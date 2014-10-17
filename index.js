@@ -2,20 +2,16 @@ var inherits = require('inherits');
 var extend = require('xtend/mutable');
 
 function Class(Super, proto) {
-  //function Constructor(opts) {
-  //  if (opts instanceof Constructor) return opts;
-  //  if (!(this instanceof Constructor)) return new Constructor(opts);
-  //  this.opts = opts;
-  //  this._super = Super && Super.bind(this);
-  //  Class.call(this, opts);
-  //}
-
   if (!proto) {
     proto = Super || {};
     Super = null;
   }
 
-  var Constructor = proto.constructor;
+  var Constructor = (
+    Object === proto.constructor ?
+    function() {Super && Super.apply(this, arguments);} :
+    proto.constructor
+  );
 
   function _Constructor() {
     var instance = this;

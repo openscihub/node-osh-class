@@ -32,6 +32,16 @@ describe('Class', function() {
     expect(c).to.be.a(B);
   });
 
+  it('should provide default constructor', function() {
+    var A = Class({
+      constructor: function() {this.valA = 3;}
+    });
+    var B = Class(A, {});
+
+    var b = B();
+    expect(b.valA).to.be(3);
+  });
+
   it('should super', function() {
     var A = Class({
       constructor: function() {this.valA = 3;}
